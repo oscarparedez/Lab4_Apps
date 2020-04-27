@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Lab4_Apps</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Zvent Organizing App</string>
+    <string name="nav_header_subtitle">support@zvent.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_share">Compartir</string>
+
+    <string name="menu_home">Zvent</string>
+    <string name="menu_gallery">Acerca De</string>
+    <string name="menu_slideshow">Registrando</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="inicio">Inicio</string>
+    <string name="acerca_de">Acerca De</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="imagen_de_inicio">imagen de inicio</string>
+
+
+    <string name="cantidad" id="cantidad">Registrando (1/10)</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_settings">Acerca De</string>
+    <string name="compartir">Compartir</string>
+</resources>
