@@ -20,6 +20,9 @@
             android:name="text"
             app:argType="string"
             android:defaultValue="Default Text" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_invitados"
+            app:destination="@id/nav_invitados" />
     </fragment>
 <!--    <fragment-->
 <!--        android:id="@+id/nav_home_second"-->
@@ -61,6 +64,36 @@
         <action
             android:id="@+id/action_nav_resultado_to_nav_home"
             app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_invitados"
+        android:name="com.example.lab4_apps.ui.invitados.InvitadosFragment"
+        android:label="Invitados"
+        tools:layout="@layout/invitados_fragment" >
+        <action
+            android:id="@+id/action_invitadosFragment_to_agregarInvitados"
+            app:destination="@id/nav_agregarInvitados" />
+        <argument
+            android:name="nombre"
+            app:argType="string"
+            android:defaultValue="Nombre" />
+        <argument
+            android:name="telefono"
+            app:argType="string"
+            android:defaultValue="Telefono" />
+        <argument
+            android:name="correo"
+            app:argType="string"
+            android:defaultValue="Correo" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_agregarInvitados"
+        android:name="com.example.lab4_apps.ui.agregarInvitados.AgregarInvitados"
+        android:label="Agregar Invitado"
+        tools:layout="@layout/agregar_invitados_fragment" >
+        <action
+            android:id="@+id/action_nav_agregarInvitados_to_nav_invitados"
+            app:destination="@id/nav_invitados" />
     </fragment>
 
 </navigation>

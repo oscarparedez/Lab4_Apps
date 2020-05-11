@@ -2,10 +2,7 @@ package com.example.lab4_apps.ui.home
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -24,16 +21,13 @@ class HomeFragment : Fragment() {
     private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setHasOptionsMenu(true)
         super.onCreate(savedInstanceState)
-//        setHasOptionsMenu(false)
+
     }
 
     @SuppressLint("UseRequireInsteadOfGet")
-    override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
@@ -52,11 +46,15 @@ class HomeFragment : Fragment() {
         return root
     }
 
-    @Override
-    override fun onPrepareOptionsMenu(menu: Menu){
-
-        menu.findItem(R.id.action_share).setVisible(false)
-        super.onPrepareOptionsMenu(menu)
-
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.main, menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val action = HomeFragmentDirections.actionNavHomeToNavGallery()
+        findNavController().navigate(action)
+        return super.onOptionsItemSelected(item)
+    }
+    
 }

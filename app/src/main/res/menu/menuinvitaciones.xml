@@ -2,9 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:icon="@drawable/ic_check"
-        android:id="@+id/btnSi"/>
+        android:id="@+id/btnSi"
+        android:title="BtnSi" />
 
     <item android:icon="@drawable/ic_close"
-        android:id="@+id/btnNo"/>
+        android:id="@+id/btnNo"
+        android:title="BtnNo" />
 
 </menu>

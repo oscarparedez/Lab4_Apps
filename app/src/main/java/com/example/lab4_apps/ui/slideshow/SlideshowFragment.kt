@@ -1,5 +1,6 @@
 package com.example.lab4_apps.ui.slideshow
 
+import android.media.Image
 import android.os.Bundle
 import android.view.*
 import android.widget.ImageButton
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.example.lab4_apps.R
+import com.example.lab4_apps.R.id.btnSi
 
 
 class SlideshowFragment : Fragment() {
@@ -49,6 +51,7 @@ class SlideshowFragment : Fragment() {
         txtTelefono.text = listaTelefonos[0]
         txtEmail.text = listaCorreos[0]
 
+
         btnSi.setOnClickListener(){
             if(i>=10){
                 val action = SlideshowFragmentDirections.actionNavSlideshowToNavResultado(listaConfirmados.toIntArray(), listaNoConfirmados.toIntArray())
@@ -64,7 +67,6 @@ class SlideshowFragment : Fragment() {
                 i++
 
             }
-
         }
 
         btnNo.setOnClickListener(){
@@ -83,18 +85,6 @@ class SlideshowFragment : Fragment() {
             }
         }
         return root
-    }
-
-
-
-    //inflate the menu
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater!!.inflate(R.menu.menushare, menu)
-
-        //hide some items from this fragment (e.g. sort)
-        menu!!.findItem(R.id.action_share).isVisible = false
-
-        super.onCreateOptionsMenu(menu, inflater)
     }
 
 
