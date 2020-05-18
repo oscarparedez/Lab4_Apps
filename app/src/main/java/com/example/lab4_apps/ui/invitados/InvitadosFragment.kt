@@ -37,7 +37,7 @@ class InvitadosFragment : Fragment() {
         var telefonoInvitado: String = InvitadosFragmentArgs.fromBundle(arguments!!).telefono
         var correoInvitado: String = InvitadosFragmentArgs.fromBundle(arguments!!).correo
 
-        var texto: String = "Invitado 1\nNombre: $nombreInvitado\nTelefono: $telefonoInvitado\nCorreo Electronico: $correoInvitado\n\n"
+        var texto: String = "Invitado 1\nNombre: $nombreInvitado\nTelefono: $telefonoInvitado\nCorreo Electronico: $correoInvitado\nRol: Fotógrafo\n"
 
 
         txt+=texto

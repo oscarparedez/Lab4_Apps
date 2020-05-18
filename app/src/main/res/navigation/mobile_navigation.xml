@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_nav_home_to_nav_invitados"
             app:destination="@id/nav_invitados" />
+        <action
+            android:id="@+id/action_nav_home_to_rolesFragment"
+            app:destination="@id/rolesFragment" />
     </fragment>
 <!--    <fragment-->
 <!--        android:id="@+id/nav_home_second"-->
@@ -94,6 +97,24 @@
         <action
             android:id="@+id/action_nav_agregarInvitados_to_nav_invitados"
             app:destination="@id/nav_invitados" />
+    </fragment>
+    <fragment
+        android:id="@+id/rolesFragment"
+        android:name="com.example.lab4_apps.ui.roles.RolesFragment"
+        android:label="roles_fragment"
+        tools:layout="@layout/roles_fragment" >
+        <action
+            android:id="@+id/action_rolesFragment_to_agragarRolesFragment"
+            app:destination="@id/agragarRolesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agragarRolesFragment"
+        android:name="com.example.lab4_apps.ui.agregarRoles.AgragarRolesFragment"
+        android:label="agragar_roles_fragment"
+        tools:layout="@layout/agragar_roles_fragment" >
+        <action
+            android:id="@+id/action_agragarRolesFragment_to_rolesFragment"
+            app:destination="@id/rolesFragment" />
     </fragment>
 
 </navigation>
